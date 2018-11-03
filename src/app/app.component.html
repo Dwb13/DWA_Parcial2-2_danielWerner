@@ -1,4 +1,42 @@
-
-<app-header></app-header>
-
-<router-outlet></router-outlet>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<h1 class="display-3 mb-5">
+  {{title}}
+</h1>
+<form class=" form-inline my-5">
+  <div class="form-group mx-2">
+      <label for="filterInput">Search Filter</label>
+      <input type="text" class="form-control mx-2" id="filterInput" name="filter" [(ngModel)]="filter" (ngModelChange)="refreshList($event)" />
+  </div>
+  <div class="form-group mx-2">
+      <label for="totalOutput">Total Matches</label>
+      <input type="number" id="totalOutput" class="form-control mx-2" name="total" [(ngModel)]="total" disabled="disabled" />
+  </div>
+  <div class="form-group mx-2">
+      <label for="countInput">Items Shown</label>
+      <select class="form-control mx-2" id="countInput" name="count" [(ngModel)]="shown" (ngModelChange)="refreshList($event)">
+          <option *ngFor="let i of [5, 10, 15, 20]">
+              {{i}}
+          </option>
+      </select>
+  </div>
+</form>
+<div class="card-columns my-5">
+  <div *ngFor="let comic of comics" class="card">
+    <a href="{{ comic.urls[0].url }}">
+        <img class="card-img-top img-fluid" src="{{comic.thumbnail.path}}.{{ comic .thumbnail.extension}}" alt="Card image cap">
+    </a>
+    <div class="card-block">
+        <h4 class="card-title">{{ comic.title}}</h4>
+        <p class="card-text">
+          {{ comic.variantDescription}}
+          <br>
+          {{ comic.description }}
+        </p>
+    </div>
+  </div>
+</div>
+<footer>
+  <blockquote class="blockquote">
+      <p class="mb-0" [innerHTML]="attribution"></p>
+  </blockquote>
+</footer>
