@@ -1,0 +1,21 @@
+<section class="sectionCont"> 
+  
+  <h2> Angular date pipe </h2>
+  <p>
+    This is an example of usage of some Angular pipes:
+  </p>
+  <ul>
+    <li><b>Original:</b> {{ fecha }}</li>
+    <li><b>After the date pipe:</b> {{ fecha | date: 'dd/MM/yyyy' }}</li>
+    <li><b>After some pipes:</b> {{ fecha | date: 'fullDate' | uppercase | lowercase }}</li>
+  </ul>  
+  <br>
+  <p>-------------------------------------------------</p>
+  <br>
+  <h2> Custom pipe </h2>
+  <ul>
+    <li><b>Original:</b> {{ 5 }}</li>
+    <li><b> After the custom pipe:</b> {{ 5 | multiplicarPor: 7 :8 | lowercase }}</li>
+  </ul>
+
+</section>

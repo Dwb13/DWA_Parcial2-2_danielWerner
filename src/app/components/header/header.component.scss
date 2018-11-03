@@ -1,0 +1,19 @@
+header.headerCont {
+    background: black;
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+    img {
+        display: inline-block;
+        margin: 10px 25px 10px 25px;
+        height: 60px;
+    }
+    p.title {
+        color: white;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 27px;
+        margin: 0;
+        line-height: 78px;
+    }
+}

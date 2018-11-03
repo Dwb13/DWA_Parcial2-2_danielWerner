@@ -1,0 +1,150 @@
+@import '../../../styles/general/mq.scss';
+
+.bodyCont {
+    margin: 0 auto 0px;
+    display: block;
+    position: relative;
+    max-width: 1200px;
+    width: 90%;
+}
+
+.leftCont {
+    width: 45%;
+    vertical-align: top;
+    z-index: 2;
+    position: relative;
+    float: left;
+    @media only screen and (max-width: $md) {
+        width:100%;
+        float: initial;
+    }
+    img.imgDigimon {
+        display: block;
+        margin: 15px auto;
+        width: 85%;
+        max-width: 270px;
+    }
+}
+
+.rightCont {
+    position: relative;
+    width: 45%;
+    background: #FFFFFF;
+    vertical-align: top;
+    border-radius: 15px;
+    float: right;
+    padding: 20px 0px;
+    margin-right: 25px;
+    @media only screen and (max-width: $md) {
+        width:100%;
+        float: initial;
+    }
+    ul {
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        li {
+            display: inline-block;
+            vertical-align: top;
+            width: 40%;
+            border-radius: 7px;
+            margin: 2%;
+            border: 1px solid #e2e2e2;
+            position: relative;
+            background: white;
+        }
+    }
+    
+}
+
+.center {
+    text-align: center;
+}
+
+.itemFeature {
+    p, button {
+        display: inline-block;
+    }
+    button:focus {
+        outline: none;
+    }
+    button.btnDelete {
+        position: absolute;
+        right: -5px;
+        top: -6px;
+        background: #bf5d44;
+        border: none;
+        color: white;
+        border-radius: 4px;
+        font-size: 17px;
+        height: 20px;
+        width: 20px;
+        line-height: 1px;
+        &:hover {
+            background: #884231;
+        }
+    }
+    
+    p {
+        font-size: 15px;
+        width: 85%;
+    }
+}
+
+.backBlue {
+    background: #7ebfef;
+}
+
+button.btnChangeColor {
+    height: 22px;
+    position: absolute;
+    right: -1px;
+    bottom: -10px;
+    border-radius: 14px;
+    border: 1px solid #c1c1c1;
+    background: #ffffff;
+    color: #717171;
+    padding: 0px 11px;
+    font-size: 11px;
+    &:hover {
+       background: #c1c1c1;
+       color: white; 
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.btnAddFeature {
+    border: 1px solid #0586d0;
+    border-radius: 26px;
+    background: transparent;
+    color: #0586d0;
+    font-size: 20px;
+    margin: 0px 0px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    &:hover {
+        background-color: #0586d0;
+        color: white;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+
+
+input.inputAddFeature {
+    height: 28px;
+    position: relative;
+    top: -3px;
+    padding: 0 8px;
+    border-radius: 20px;
+    border: 1px solid #a09f9f;
+    margin-right: 9px;
+    &:focus {
+        outline: none;
+    }
+}

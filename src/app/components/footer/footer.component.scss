@@ -1,0 +1,44 @@
+footer.footerCont {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #307dc1;
+    width: 100%;
+    ul {
+        list-style: none;
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        max-width: 600px;
+        text-align: center;
+        padding: 0;
+        li {
+            cursor: pointer;
+            .othersTxt {
+                color: white;
+            }
+            &:hover {
+                opacity: (0.7); 
+            }
+            vertical-align: top;
+            height: 60px;
+            width: 60px;
+            border-radius: 11px;
+            background: white;
+            display: inline-block;
+            margin: 10px;
+        }
+        li:nth-child(1) {
+            background: transparent;
+            cursor: auto;
+            div p {
+                color: white;
+                margin: 20px 0px;
+            }
+            &:hover{
+                background: transparent;
+                cursor: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+<section class="sectionCont"> 
+
+  <div *ngIf = "parametroUrl">
+      
+        <h2> {{ listComics[parametroUrl].nombre }} </h2>
+        <ul>
+            <li>ID: {{ listComics[parametroUrl].id }}</li>
+            <li>Date: {{ listComics[parametroUrl].fechaPublicacion }}</li>
+            <li>{{ listComics[parametroUrl].editorial }}</li>
+        </ul>
+        <br>
+      <button class="btnGeneric" (click)="volverAtras()"> Go back </button>
+  </div>
+
+  <div *ngIf = "!parametroUrl">
+      <h2>List of comics with an specific format:</h2>
+      El parámetro de la url es {{ parametroUrl }}
+      <ul>
+          <li *ngFor="let comic of listComics;">
+              {{ comic.id }} - {{comic.nombre }}
+              <button class="btnGeneric" (click)="verDetalle(comic.id);"> Ver detalle </button>
+              <br>
+          </li>
+      </ul>
+  </div>
+
+</section>

@@ -1,0 +1,22 @@
+<section class="sectionCont">
+    
+    <div class="leftCont imageAgumon">
+        <img class="imgDigimon" src="../../assets/img/agumon.png" alt="agumon">
+    </div>
+    
+    <div class="rightCont">
+        <ul>
+            <li class="itemFeature" *ngFor="let caract of feature_list; let i= index">
+                <p>{{ caract }}</p>
+                <button class="btnDelete" (click)="eliminarCaract(i);"> - </button>               
+            </li>
+        </ul>
+        <div class="center">
+            <p> Add new feature: </p>
+            <input class="inputAddFeature" type="text" [(ngModel)]="feature_a_guardar">
+            <button class="btnAddFeature" (click)="agregarCarac();"> + </button>
+        </div>
+    </div>
+
+</section>
+
