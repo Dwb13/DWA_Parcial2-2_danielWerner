@@ -3,7 +3,7 @@ import { FeaturesService } from '../../services/features.service';
 
 
 @Component({
-  selector: 'app-Marvel',
+  selector: 'app-marvelmain',
   templateUrl: './marvelmain.component.html',
   styleUrls: ['./marvelmain.component.scss'],
   providers: [ FeaturesService ] 
